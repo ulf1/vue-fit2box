@@ -1,4 +1,4 @@
-# v-fit-text-to-box
+# v-fit2box
 Resize the font-size in rem units so that the text fits into the html element.
 
 
