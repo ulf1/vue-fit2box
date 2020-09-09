@@ -1,6 +1,10 @@
 # v-fit2box
 Resize the font-size in rem units so that the text fits into the html element.
 
+In other words the font size is smaller for long texts, and bigger for shorter text passages.
+For example,
+
+![](https://user-images.githubusercontent.com/8018044/92608452-acc7d080-f2b5-11ea-9951-cc89cd92d10f.png)
 
 ## Getting Started
 1. Install into your project
