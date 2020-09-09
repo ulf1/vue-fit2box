@@ -1,0 +1,12 @@
+{
+  "name": "v-fit-text-to-box",
+  "version": "0.1.0",
+  "description": "Resize the font-size in rem units so that the text fits into the html element.",
+  "main": "index.js",
+  "repository": "https://github.com/ulf1/v-fit-text-to-box",
+  "author": "Ulf Hamster <554c46@gmail.com>",
+  "license": "MIT",
+  "keywords": ["vue", "vue.js", "resize text", "fit text to box", "resize font size"],
+  "bugs": "https://github.com/ulf1/v-fit-text-to-box/issues",
+  "files": ["index.js"]
+}
