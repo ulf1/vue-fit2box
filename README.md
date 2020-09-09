@@ -6,16 +6,16 @@ Resize the font-size in rem units so that the text fits into the html element.
 1. Install into your project
 
 ```bash
-yarn add v-fit-text-to-box
+yarn add vue-fit2box
 ```
 
 2. Add directive globally to your `src/main.js`
 
 ```js
 import Vue from 'vue';
-import FitTextToBox from 'v-fit-text-to-box';
+import Fit2Box from 'vue-fit2box';
 ...
-Vue.directive('fit-text-to-box', FitTextToBox);
+Vue.directive('fit2box', Fit2Box);
 ...
 ```
 
