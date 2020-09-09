@@ -22,7 +22,7 @@ Vue.directive('fit2box', Fit2Box);
 3. Apply directive in HTML
 
 ```html
-<div v-fit-text-to-box class="mysize">
+<div v-fit2box class="mysize">
   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 </div>
 ```
