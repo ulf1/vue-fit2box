@@ -19,6 +19,20 @@ Vue.directive('fit2box', Fit2Box);
 ...
 ```
 
+3. Apply directive in HTML
+
+```html
+<div v-fit-text-to-box class="mysize">
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+</div>
+```
+
+```css
+.mysize {
+  width: 250px;
+  height: 100px;
+}
+```
 
 ## Misc commands
 - Login into yarn: `yarn login`
