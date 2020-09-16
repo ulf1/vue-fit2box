@@ -1,6 +1,26 @@
+// Dev version of https://github.com/ulf1/vue-fit2box
 export default {
-  inserted: function (el) {
+  /** for the initial call/rendering */
+  inserted: function(el, binding) {
+    el.textContent = binding.value;
     el.style.fontSize = fitTextToBox(el);
+  },
+  /** when a new text string is injected */
+  update: function(el, binding) { 
+    el.textContent = binding.value;
+    el.style.fontSize = fitTextToBox(el);
+  },
+  /** if the HTML element's dimension changes, see https://web.dev/resize-observer/ */
+  bind: function(el, binding){
+    el.resize_ob = new ResizeObserver(() => {
+      el.textContent = binding.value;
+      el.style.fontSize = fitTextToBox(el);
+    });
+    el.resize_ob.observe(el);
+  },
+  unbind: function(el){
+    el.resize_ob.unobserve(el);
+    el.resize_ob = undefined;
   }
 }
 
