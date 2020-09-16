@@ -1,6 +1,6 @@
 {
   "name": "vue-fit2box",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Resize the font-size in rem units so that the text fits into the html element.",
   "main": "index.js",
   "repository": "https://github.com/ulf1/vue-fit2box",
