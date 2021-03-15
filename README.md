@@ -1,3 +1,6 @@
+[![npm version](https://badge.fury.io/js/vue-fit2box.svg)](https://badge.fury.io/js/vue-fit2box)
+[![DOI](https://zenodo.org/badge/294111327.svg)](https://zenodo.org/badge/latestdoi/294111327)
+
 # v-fit2box directive for Vue2
 Resize the font-size in rem units so that the text fits into the html element.
 
