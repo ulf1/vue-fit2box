@@ -1,7 +1,7 @@
 [![npm version](https://badge.fury.io/js/vue-fit2box.svg)](https://badge.fury.io/js/vue-fit2box)
 [![DOI](https://zenodo.org/badge/294111327.svg)](https://zenodo.org/badge/latestdoi/294111327)
 
-# v-fit2box directive for Vue2
+# v-fit2box directive for Vue3
 Resize the font-size in rem units so that the text fits into the html element.
 
 In other words the font size is smaller for long texts, and bigger for shorter text passages.
@@ -10,23 +10,25 @@ For example,
 ![](https://user-images.githubusercontent.com/8018044/92608452-acc7d080-f2b5-11ea-9951-cc89cd92d10f.png)
 
 ## Important Note
-The branch `main-vue2` and all npm versions `@0.*.*` refer to fit2box as Vue2 directive.
-Please visit to the `main` branch of this repository, or resp. use versions `@1.*.*` of this npm package for Vue3.
+The branch `main` and all npm versions `@1.*.*` refer to fit2box as Vue3 directive.
+For legacy code the old Vue2 directive is available in the branch `main-vue2` where the npm versions `@0.*.*` of the Vue2 v-fit2box directive are maintained.
 
 ## Getting Started
 1) Install into your project
 
 ```bash
-yarn add vue-fit2box@0.2.2
+yarn add vue-fit2box@1.0.0
 ```
 
 2) Add directive globally to your `src/main.js`
 
 ```js
-import Vue from 'vue';
+import { createApp, ... } from 'vue';
 import Fit2Box from 'vue-fit2box';
 ...
-Vue.directive('fit2box', Fit2Box);
+const app = createApp({ ... });
+...
+app.directive('fit2box', Fit2Box);
 ...
 ```
 

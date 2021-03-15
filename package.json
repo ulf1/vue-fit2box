@@ -1,6 +1,6 @@
 {
   "name": "vue-fit2box",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "Vue.js directive to automatically adjust the font size (rem) so that the text fits into a displayed HTML element.",
   "main": "index.js",
   "repository": "https://github.com/satzbeleg/vue-fit2box",
