@@ -1,12 +1,12 @@
 {
   "name": "vue-fit2box",
-  "version": "0.2.1",
-  "description": "Resize the font-size in rem units so that the text fits into the html element.",
+  "version": "0.2.2",
+  "description": "Vue.js directive to automatically adjust the font size (rem) so that the text fits into a displayed HTML element.",
   "main": "index.js",
-  "repository": "https://github.com/ulf1/vue-fit2box",
+  "repository": "https://github.com/satzbeleg/vue-fit2box",
   "author": "Ulf Hamster <554c46@gmail.com>",
-  "license": "MIT",
-  "keywords": ["directive", "vue directive", "vue", "vue.js", "resize text", "fit text to box", "resize font size"],
-  "bugs": "https://github.com/ulf1/vue-fit2box/issues",
+  "license": "Apache-2.0",
+  "keywords": ["directive", "vue directive", "vue", "vue.js", "resize text", "fit text to box", "resize font size", "font resizing", "text resizing"],
+  "bugs": "https://github.com/satzbeleg/vue-fit2box/issues",
   "files": ["index.js"]
 }
