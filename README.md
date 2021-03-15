@@ -37,7 +37,7 @@ app.directive('fit2box', Fit2Box);
 ```html
 <template>
   <div>
-    <div v-fit2box="mytext" class="mybox"></div>
+    <div v-fit2box="mytext" class="mybox"> {{ mytext }} </div>
     <button @click="nextExample">Next</button>
   </div>
 </template>
