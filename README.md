@@ -23,13 +23,22 @@ yarn add vue-fit2box@1.0.0
 2) Add directive globally to your `src/main.js`
 
 ```js
-import { createApp, ... } from 'vue';
+  
+/** Load packages */
+import { createApp, h } from 'vue';
+import App from './App.vue';
+
+/** Add everything together */
+const app = createApp({
+  render: () => h(App)
+});
+
+/** v-fit2box */
 import Fit2Box from 'vue-fit2box';
-...
-const app = createApp({ ... });
-...
 app.directive('fit2box', Fit2Box);
-...
+
+/** Mount the app */
+app.mount('#app');
 ```
 
 3) Apply directive in the Vue component
@@ -37,7 +46,7 @@ app.directive('fit2box', Fit2Box);
 ```html
 <template>
   <div>
-    <div v-fit2box="mytext" class="mybox"> {{ mytext }} </div>
+    <div v-fit2box="mytext" class="mybox" :key="index"> {{ mytext }} </div>
     <button @click="nextExample">Next</button>
   </div>
 </template>
@@ -45,28 +54,31 @@ app.directive('fit2box', Fit2Box);
 
 ```javascript
 <script>
+import { ref, reactive, watch } from "vue";
 export default {
   name: "DemoFit2Box",
-  data() {  
-    return {
-      myexamples: [
+  setup(){
+    const index = ref(0);
+    const mytext = ref("");
+    const data = reactive({
+      examples: [
         "Lorem ipsum dolor sit amet",
         "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "Duis aute irure dolor in  reprehenderit in voluptate velit esse."
-      ],
-      index: 0
+      ]
+    });
+    watch(
+      () => index.value,
+      (x) => {
+        mytext.value = data.examples[x]
+      }
+    );
+    const nextExample = () => {
+      index.value = (index.value + 1) % data.examples.length;
     }
-  },
-  computed: {
-    mytext(){
-      return this.myexamples[this.index];
-    }
-  },
-  methods: {
-    nextExample(){
-      this.index = (this.index + 1) % this.myexamples.length;
-    }
-  },
+    nextExample();
+    return { nextExample, mytext, index }
+  }
 }
 </script>
 ```
